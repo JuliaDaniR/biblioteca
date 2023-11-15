@@ -1,0 +1,50 @@
+<nav>
+    <ul class="menu-horizontal">
+        <li>
+            <a th:if="${session.usuariosession != null}" href="#">Libro</a>
+            <ul class="menu-vertical">
+                <li><a href="/libro/lista">Ver</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/libro/registrar">Agregar Nuevo</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/libro/modificar">Modificar</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/libro/modificar">Eliminar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a th:if="${session.usuariosession != null}" href="#">Autor</a>
+            <ul class="menu-vertical">
+                <li><a href="/autor/lista">Ver</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/autor/registrar">Agregar Nuevo</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/autor/modificar">Modificar</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/autor/modificar">Eliminar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a th:if="${session.usuariosession != null}" href="#">Editorial</a>
+            <ul class="menu-vertical">
+                <li><a href="/editorial/lista">Ver</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/editorial/registrar">Agregar Nueva</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/editorial/modificar">Modificar</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" href="/editorial/modificar">Eliminar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a th:if="${session.usuariosession != null}" href="#">Perfil</a>
+            <ul class="menu-vertical">
+                <li><a href="/logout">Cerrar sesion</a></li>
+                <li><a href="/perfil">Modificar</a></li>
+            </ul>
+        </li>
+        <li>
+            <a th:if="${session.usuariosession != null}" sec:authorize="hasRole('ADMIN')" href="#">Usuarios</a>
+            <ul class="menu-vertical">
+                <li><a th:href="@{/admin/usuarios}">Ver Usuarios</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="index" th:if="${session.usuariosession == null}" th:href="@{/login}">Ingresar</a>
+        </li>
+        <li>
+            <a class="index" th:if="${session.usuariosession == null}" th:href="@{/registrar}">Registrate</a>
+        </li>
+    </ul>
+</nav>

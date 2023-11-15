@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace = "/fragments/head_tabla :: head"></head>
+    <body>
+        <header th:replace = "/fragments/header :: header"></header>
+        <nav th:replace = "/fragments/navbar :: nav"></nav>
+        <div th:replace = "/fragments/modelo :: div"></div>
+        <section>
+            <div class="container">
+                <table class="tabla">
+                    <thead>
+                        <tr >
+                            <th>Id del Usuario</th>
+                            <th>Nombre</th>
+                            <th>Foto de Perfil</th>
+                            <th>Rol</th>
+                            <th>Cambiar Rol</th>
+                            <th>Modificar</th>
+
+                        </tr>
+                    </thead>
+                    <tbody th:each="usuario : ${usuarios}"> 
+                        <tr>
+                            <th th:text="${usuario.id}"></th>
+                            <td th:text="${usuario.nombre}"></td>
+                            <td>
+                                <a> <img th:if="${usuario.imagen != null}" class="logo" th:src="@{/imagen/perfil/__${usuario.id}__}" ></a>
+                            </td>
+
+                            <td th:text="${usuario.rol}"></td>
+
+                            <td>
+                                <a th:href= "@{/admin/modificarRol/__${usuario.id}__}"><i class="fas fa-feather-alt"></i>Cambiar</a>
+                            </td>
+
+                            <td>
+                                <a th:href= "@{/perfil/__${usuario.id}__}"><i class="fas fa-feather-alt"></i> Modificar</a>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="btn-volver">
+                    <a th:href="@{/inicio}">Volver</a>
+                </div>
+            </div>
+        </section>
+        <footer th:replace = "/fragments/footer :: footer"></footer>
+    </body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace = "/fragments/head_tabla :: head"></head>
+    <body>
+        <header th:replace = "/fragments/header :: header"></header>
+        <nav th:replace = "/fragments/navbar :: nav"></nav>
+        <div th:replace = "/fragments/modelo :: div"></div>
+        <section>
+            <div class="container">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th class="isbn">ISBN</th>
+                            <th>Titulo</th>
+                            <th>Ejemplares</th>
+                            <th>Autor</th>
+                            <th>Editorial</th>
+                            <th>Descripción</th>
+                            <th>Descargar</th>
+                        </tr>
+                    </thead> 
+                    <tbody th:each="libro : ${libros}">
+                        <tr>
+                            <th class="isbn" th:text="${libro.isbn}"></th>           
+                            <td th:text="${libro.titulo}"></td>
+                            <td th:text="${libro.ejemplares}"></td>
+                            <td th:text="${libro.autor.nombre}"></td>
+                            <td th:text="${libro.editorial.nombre}"></td>
+                            <td>
+                                <a  class="info" th:href="@{/libro/descripcion/__${libro.isbn}__}"><i class="fas fa-feather-alt"></i>
+                                    Más Info</a>
+                            </td>
+                            <td>
+                                <a  class="ver" th:href="@{/libro/descargar/__${libro.isbn}__}"><i class="fa-regular fa-file-pdf"></i>
+                                    Bajar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn-volver">
+                    <a th:href="@{/inicio}">Volver</a>
+                </div>
+            </div>
+        </section>
+        <footer th:replace = "/fragments/footer :: footer"></footer>
+    </body>
+</html>
+
+

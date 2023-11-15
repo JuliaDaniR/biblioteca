@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace = "/fragments/head :: head"></head>
+    <body>
+        <header th:replace = "/fragments/header :: header"></header>
+        <nav th:replace = "/fragments/navbar :: nav"></nav>
+        <div th:replace = "/fragments/modelo :: div"></div>
+        <section class="container">
+            <div class="contain">
+                <div class="container-saludo">
+                    <h2>Encuentra todos los Libros aquí</h2>
+                </div>
+            </div>
+        </section>  
+        <footer th:replace = "/fragments/footer :: footer"></footer>
+    </body>
+</html>

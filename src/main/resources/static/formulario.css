@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body {
+    background-image: url(/fondo.jpeg);
+    background-size: cover;
+    opacity: 0.9;
+}
+/*navbar*/
+nav {
+    max-width: 900px;
+    margin: auto;
+    background: linear-gradient(
+        to left,
+        rgb(197, 195, 195) 0%,
+        rgb(169, 169, 169) 25%,
+        rgb(124, 124, 124) 50%,
+        rgb(80, 77, 77) 75%,
+        rgb(60, 57, 57) 100%
+        );
+    font-size: 2rem;
+    margin-top: 50px;
+    box-shadow: 3px 0 7px 6px rgba(0, 0, 0, 0.8);
+}
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.menu-horizontal > li:hover {
+    background-color: darkolivegreen;
+}
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+.menu-vertical li:hover {
+    background-color: black;
+}
+.menu-vertical li a {
+    display: block;
+    color: rgb(159, 190, 138);
+    font-weight: bold;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+/*header*/
+.container-logo {
+    background-color: beige;
+    width: 100%;
+    height: 150px;
+    border-bottom: 4px groove black;
+}
+.titulo {
+    display: inline;
+    align-content: center;
+    float: inline-end;
+    margin-top: 30px;
+    margin-right: 60px;
+    font-weight: bolder;
+    text-shadow: 3px 5px 5px rgba(122, 7, 7, 0.7);
+    font-size: 4rem;
+}
+.logo {
+    width: 150px;
+    padding: 20px;
+    margin-left: 60px;
+    animation: animate 8s alternate-reverse infinite;
+}
+.titulo:hover {
+    color: darkolivegreen;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(50deg);
+    }
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+/*seccion*/
+.container-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    margin-top: 150px;
+
+}
+.container-formulario h2{
+    justify-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+.form-container {
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: bisque;
+}
+.form-container input{
+    font-size: 2rem;
+    padding: 3px;
+    margin: 5px;
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.form-container h2{
+    font-size: 3rem;
+    padding: 20px 0;
+    font-weight: bolder;
+    text-shadow: 3px 5px 5px rgba(255,255, 0, 0.7);
+}
+.form-container select{
+    font-size: 2rem;
+    padding: 3px;
+    margin: 5px;
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.otro{
+    display: inline-block;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: rgb(61, 139, 112);
+    color: whitesmoke;
+}
+.otro:hover{
+    background-color: rgb(56, 173, 87);
+    color: rgb(13, 75, 57);
+}
+.input{
+    text-align: center;
+}
+.btn-subir{
+    text-align: center;
+    padding: 4px 20px ;
+    margin: 30px 0;
+}
+.btn-subir button{
+    width: 90%;
+    padding: 3px 0;
+    border-radius: 20px;
+    background-color: rgb(98, 46, 71);
+    box-shadow: 0 0 8px 3px rgba(0,0,0,.5);
+    color: antiquewhite;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn-volver{
+    text-align: center;
+    padding: 4px 20px;
+    margin: 30px 0;
+
+}
+.btn-volver a{
+    width: 60%;
+    padding: 3px 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 6px 3px rgba(0,0,0,.5);
+    background-color: rgb(88, 73, 80);
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn-volver a:hover{
+    background:  rgb(36, 4, 19);
+    color: whitesmoke;
+}
+.btn-subir button:hover{
+    background:  rgb(36, 4, 19);
+    color: whitesmoke;
+}
+/*modelo*/
+.container-modelo{
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.card-body{
+    justify-items: center;
+    text-align: center;
+}
+.exito{
+    background-color: green;
+    width: 30%;
+}
+.error{
+    background-color: red;
+    width: 30%;
+}
+/*footer*/
+.container-footer {
+    background-color: blanchedalmond;
+    margin-top: 200px;
+    font-size: 2rem;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 4px groove black;
+}
+

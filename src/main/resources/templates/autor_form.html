@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace = "/fragments/head_formulario :: head"></head>
+    <body>
+        <header th:replace = "/fragments/header :: header"></header>
+        <nav th:replace = "/fragments/navbar :: nav"></nav>
+        <div th:replace = "/fragments/modelo :: div"></div>
+        <section class="container-formulario">
+            <div class="form-container">
+                <form action="/autor/registro" method="POST">
+                    <h2>Carga Autor</h2>
+                    <div class="input">
+                        <input type="text" name="nombre" 
+                               placeholder="Ingrese el nombre del Autor"
+                               class="text-name">
+                    </div>
+                    <div class="btn-subir">
+                        <button type="submit">Subir</button>
+                    </div>
+                    <div class="btn-volver">
+                        <a href="@{/inicio}">Volver</a>
+                    </div>
+                </form>                                           
+        </section>
+        <footer th:replace = "/fragments/footer :: footer"></footer>
+    </body>
+</html>

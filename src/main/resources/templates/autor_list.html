@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace = "/fragments/head_tabla :: head"></head>
+    <body>
+        <header th:replace = "/fragments/header :: header"></header>
+        <nav th:replace = "/fragments/navbar :: nav"></nav>
+        <div th:replace = "/fragments/modelo :: div"></div>
+        <section>
+            <div class="container">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Id Autor</th>
+                            <th>Nombre del Autor</th>
+                            <th>Biografia</th>
+                            <th>Libros Asociados</th>
+                        </tr>
+                    </thead> 
+                    <tbody th:each="autor : ${autores}">
+                        <tr>
+                            <th th:text="${autor.id}"></th>
+                            <td th:text="${autor.nombre}"></td>
+                            <td>
+                                <a class="info" th:href="@{/autor/biografia/__${autor.id}__}"><i class="fas fa-feather-alt"></i>
+                                    Más Info</a>
+                            </td>
+                            <td>
+                                <a class="ver" th:href="@{/autor/listado/__${autor.id}__}"><i class="fa-regular fa-eye"></i>
+                                    Ver</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn-volver">
+                    <a href="/inicio">Volver</a>
+                </div>
+            </div>
+        </section>
+        <footer th:replace = "/fragments/footer :: footer"></footer>
+    </body>
+</html>
+

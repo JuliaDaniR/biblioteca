@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace = "/fragments/head_formulario :: head"></head>
+    <body>
+        <header th:replace = "/fragments/header :: header"></header>
+        <nav th:replace = "/fragments/navbar :: nav"></nav>
+        <div th:replace = "/fragments/modelo :: div"></div>
+        <section class="container-formulario">
+            <div class="form-container">
+                <form th:action="@{/editorial/modificar/__${editorial.id}__}" method="POST">
+                    <h2>Actualizar Editorial</h2>
+                    <input hidden th:value="${id}" name="id">
+
+                    <div class="input">
+                        <input th:value="${editorial.nombre}" type="text" name="nombre" 
+                               placeholder="Ingrese el nuevo nombre"
+                               class="text-name">
+                    </div>
+                    <div class="btn-subir">
+                        <button type="submit">Actualizar</button>
+                    </div>
+                    <div class="btn-volver">
+                        <a th:href="@{/editorial/modificar}">Volver</a>
+                    </div>                    
+                </form>               
+        </section>
+        <footer th:replace = "/fragments/footer :: footer"></footer>
+    </body>
+</html>

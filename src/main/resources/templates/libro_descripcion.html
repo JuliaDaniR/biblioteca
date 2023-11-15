@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace = "/fragments/head :: head"></head>
+    <body>
+        <header th:replace = "/fragments/header :: header"></header>
+        <nav th:replace = "/fragments/navbar :: nav"></nav>
+        <div th:replace = "/fragments/modelo :: div"></div>
+        <section>
+            <div class="contain-tarjeta">
+                <div class="container-tarjeta">
+                    <div class="container-imagen-tarjeta">
+                        <h2>Descripción del libro</h2>
+                        <img src="/foto-libro.jpg" alt="" />
+                    </div>
+                    <h4>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nulla
+                        vitae libero, atque praesentium autem! Vitae quibusdam asperiores
+                        aliquam incidunt dolorem magni officiis ducimus voluptates doloremque,
+                        nesciunt molestias aut cum? Laboriosam laudantium tenetur cum est
+                        vero! Reprehenderit, aspernatur officia. Non nostrum dolores facilis
+                        eaque enim, asperiores cupiditate nesciunt sed fugit repellendus culpa
+                        officia libero explicabo adipisci maxime laboriosam tempore. Alias?
+                        Sunt blanditiis aliquid consequuntur corporis, nulla mollitia ad
+                        ducimus dicta. Ex obcaecati, voluptatem similique suscipit soluta
+                        alias iusto aspernatur perferendis deserunt fugit corrupti illum
+                        incidunt ipsam, enim dolores, voluptate doloremque! Sunt reiciendis
+                        dicta fugit reprehenderit suscipit dolorum similique aut culpa numquam
+                        eos voluptas commodi quas obcaecati maiores saepe tempore
+                        consequuntur, nesciunt non aspernatur in fugiat beatae. Doloremque
+                        facilis eaque reprehenderit. Vel sint dolores fuga animi perspiciatis
+                        vero saepe omnis nemo inventore labore architecto sit soluta esse cum
+                        porro cupiditate nostrum error, similique unde voluptas, delectus
+                        velit a repellendus! Velit, facilis. Maiores omnis officia veniam,
+                        beatae, minima distinctio corrupti tempore quas dignissimos minus odio
+                        adipisci, eaque porro maxime vel. Alias aperiam voluptatum qui totam
+                        iure sapiente facilis ducimus perferendis culpa reiciendis? Quia
+                        quaerat vel fugiat cum, et, excepturi qui numquam facilis ut,
+                        perferendis reiciendis maiores hic quam ullam necessitatibus
+                        exercitationem voluptatem sunt quas. Distinctio ducimus iste rem
+                        maiores perspiciatis? Fuga, maiores. Voluptates veritatis nulla
+                        repudiandae ab officiis et mollitia, iusto, nam voluptatibus beatae
+                        aperiam animi modi quo inventore quia. Alias dicta labore vel
+                        laudantium, aliquid excepturi quo sed atque hic quae? Possimus,
+                        suscipit quibusdam! Iste ea recusandae tempore similique eum, nemo
+                        officia, eligendi, nihil omnis ratione veritatis magni culpa incidunt
+                        aspernatur nulla! In quam, quaerat repudiandae atque necessitatibus
+                        voluptas aperiam autem! Suscipit adipisci excepturi maxime facere
+                        rerum exercitationem! Earum reiciendis numquam aut. Nulla nobis
+                        dignissimos corporis laborum temporibus harum! Blanditiis itaque
+                        aliquid enim debitis quam id consequuntur ducimus laudantium quibusdam
+                        illum?
+                    </h4>
+                </div>
+            </div>
+            <div class="btn-volver">
+                <a th:href="@{/libro/lista}">Volver</a>
+            </div>
+        </section>
+        <footer th:replace = "/fragments/footer :: footer"></footer>
+    </body>
+</html>
